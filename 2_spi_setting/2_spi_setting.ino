@@ -1,4 +1,5 @@
 // LovyanGFX SPIバスおよび使用パネルの設定を伴う使い方
+// https://github.com/lovyan03/LovyanGFX/tree/master/examples/HowToUse/2_spi_settingからソースを使用しています。
 
 // ヘッダをincludeします。
 #include <LovyanGFX.hpp>
