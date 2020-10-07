@@ -109,7 +109,7 @@ void setup(void)
 
   // データの読取りが可能なパネルの場合はtrueを、不可の場合はfalseを設定します。
   // 省略時はtrueになります。
-  panel.spi_read = true;
+  panel.spi_read = false;
 
   // データの読取りMOSIピンで行うパネルの場合はtrueを設定します。
   // 省略時はfalseになります。
@@ -155,7 +155,7 @@ void setup(void)
   // 設定が合っていない場合、setRotationを使用した際の座標がずれます。
   // （例：ST7735は 132x162 / 128x160 / 132x132 の３通りが存在します）
   panel.memory_width  = 240;
-  panel.memory_height = 240;
+  panel.memory_height = 320;
 
   // パネルの実際のピクセル数（幅と高さ）を設定します。
   // 省略時はパネルクラスのデフォルト値が使用されます。
