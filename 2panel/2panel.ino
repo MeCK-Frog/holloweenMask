@@ -206,7 +206,7 @@ void setup(void)
 
   // SPIバスの初期化とパネルの初期化を実行すると使用可能になります。
   lcd1.init();
-  lcd2.init();
+  //lcd2.init();
   //lcd3.init();
 
   lcd1.drawRect(0,0,lcd1.width(),lcd1.height(),0xFFFF);
