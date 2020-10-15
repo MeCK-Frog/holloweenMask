@@ -178,10 +178,6 @@ void setup(void)
   panel2.memory_height = 320;
   // パネルの実際のピクセル数（幅と高さ）を設定します。
   // 省略時はパネルクラスのデフォルト値が使用されます。
-  panel1.panel_width  = 240;
-  panel1.panel_height = 240;
-  panel2.panel_width  = 240;
-  panel2.panel_height = 240;
   
   // パネルのオフセット量を設定します。
   // 省略時はパネルクラスのデフォルト値が使用されます。
@@ -206,7 +202,8 @@ void setup(void)
 
   // SPIバスの初期化とパネルの初期化を実行すると使用可能になります。
   lcd1.init();
-  //lcd2.init();
+  lcd2.initPanel();
+  lcd2.clear();
   //lcd3.init();
 
   lcd1.drawRect(0,0,lcd1.width(),lcd1.height(),0xFFFF);
