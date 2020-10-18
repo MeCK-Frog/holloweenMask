@@ -178,6 +178,10 @@ void setup(void)
   panel2.memory_height = 320;
   // パネルの実際のピクセル数（幅と高さ）を設定します。
   // 省略時はパネルクラスのデフォルト値が使用されます。
+  panel1.panel_width  = 240;
+  panel1.panel_height = 240;
+  panel2.panel_width  = 240;
+  panel2.panel_height = 240;
   
   // パネルのオフセット量を設定します。
   // 省略時はパネルクラスのデフォルト値が使用されます。
@@ -232,7 +236,7 @@ void loop(void)
   lcd1.endWrite();
 
   lcd2.startWrite();
-  lcd2.setRotation(++count & 7);
+  lcd2.setRotation(count & 7);
   lcd2.setTextColor(random(65536));
   lcd2.drawNumber(lcd1.getRotation(), 16, 0);
   lcd2.setTextColor(0xFF0000U);
@@ -241,6 +245,6 @@ void loop(void)
   lcd2.drawString("G", 40, 16);
   lcd2.setTextColor(0x0000FFU);
   lcd2.drawString("B", 50, 16);
-  lcd2.drawRect(30,30,lcd1.width()-60,lcd1.height()-60,random(65536));
+  lcd2.drawRect(30,30,lcd1.width()-60,lcd2.height()-60,random(65536));
   lcd2.endWrite();
 }
