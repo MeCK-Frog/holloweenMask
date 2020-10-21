@@ -135,7 +135,11 @@ void setup(void)
   // LCDのDCを接続したピン番号を設定します省略。
   // 変更
   panel1.spi_dc = 17;
-  panel2.spi_dc = 4;
+  //gpio4=OK
+  //gpio2=OK
+  //gpio15=OK
+  //gpio13=OK
+  panel2.spi_dc = 13;
   
   // LCDのRSTを接続したピン番号を設定します。
   // 使わない場合は省略するか-1を設定します。
@@ -234,7 +238,7 @@ void loop(void)
   lcd1.drawString("B", 50, 16);
   lcd1.drawRect(30,30,lcd1.width()-60,lcd1.height()-60,random(65536));
   lcd1.endWrite();
-
+  
   lcd2.startWrite();
   lcd2.setRotation(count & 7);
   lcd2.setTextColor(random(65536));
